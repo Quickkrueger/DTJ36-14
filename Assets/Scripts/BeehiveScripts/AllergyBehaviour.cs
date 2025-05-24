@@ -3,7 +3,7 @@ using UnityEngine;
 public class AllergyBehaviour : MonoBehaviour
 {
     private int allergyLevel = 0;
-    private int maxAllergyLevel = 10;
+    private int maxAllergyLevel = 100;
 
     private void Awake()
     {
@@ -14,10 +14,6 @@ public class AllergyBehaviour : MonoBehaviour
         // Implement the logic for what happens when the bee stings the target
         Debug.Log($"{gameObject.name} has been stung!");
         allergyLevel++;
-        if (allergyLevel >= 10)
-        {
-            Debug.Log("You should get to the hospital!");
-        }
         UpdateShader();
     }
 
