@@ -14,6 +14,7 @@ public class Move : MonoBehaviour
     {
         _rb = GetComponent<Rigidbody>();
         _animator = GetComponent<Animator>();
+
     }
     public void SetMovement(CallbackContext callback)
     {
@@ -25,10 +26,12 @@ public class Move : MonoBehaviour
         if (moveDirection.sqrMagnitude > 0)
         {
             _animator.SetFloat("Speed", 1);
+            _animator.speed = _moveSpeed;
         }
         else
         {
             _animator.SetFloat("Speed", 0);
+            _animator.speed = 1;
         }
 
     }
