@@ -74,6 +74,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: e60770383cb54c44a814a153049b4904, type: 3}
       insertIndex: -1
       addedObject: {fileID: 5603595751435504256}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: e60770383cb54c44a814a153049b4904, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7098704227928249584}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: e60770383cb54c44a814a153049b4904, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5621175053594621310}
   m_SourcePrefab: {fileID: 100100000, guid: e60770383cb54c44a814a153049b4904, type: 3}
 --- !u!1 &2133313276102609405 stripped
 GameObject:
@@ -143,6 +149,22 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 2c2cf709-7a55-49ab-a776-3e5b833b180b
     m_ActionName: 'PlayerMap/Move[/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d,/Keyboard/upArrow,/Keyboard/downArrow,/Keyboard/leftArrow,/Keyboard/rightArrow]'
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5621175053594621310}
+        m_TargetAssemblyTypeName: InteractionTrigger, Assembly-CSharp
+        m_MethodName: StartInteraction
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 4e463f55-a713-48a6-b7e2-f0cb4401a8bb
+    m_ActionName: 'PlayerMap/Interact[/Keyboard/e]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: PlayerMap
@@ -223,3 +245,39 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9f4f91cdfd6f184596ef4fee767b2c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!65 &7098704227928249584
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2133313276102609405}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.52, y: 0.46, z: 1}
+  m_Center: {x: 0, y: 0.2, z: 0.82}
+--- !u!114 &5621175053594621310
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2133313276102609405}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aacd3112bb1e73b43be3622ede77235a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TriggerAction:
+    m_PersistentCalls:
+      m_Calls: []
