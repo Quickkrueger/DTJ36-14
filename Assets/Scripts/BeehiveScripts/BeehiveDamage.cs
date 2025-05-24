@@ -3,8 +3,8 @@ using UnityEngine;
 [RequireComponent(typeof(SphereCollider))]
 public class BeehiveDamage : MonoBehaviour
 {
-    public float chancePerTick = 0.1f;
-    public float TickPerSecond = 1f;
+    public float chancePerTick = 0.9f;
+    public float TickPerSecond = 8f;
     private SphereCollider sphereCollider;
     private AllergyBehaviour currentTarget = null;
     private float lastDamageAttempt = 0f;

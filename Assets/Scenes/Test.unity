@@ -339,8 +339,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa4bb24f5ef763148ba33bdaf7dd30e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  chancePerTick: 0.1
-  TickPerSecond: 3
+  chancePerTick: 0.9
+  TickPerSecond: 8
 --- !u!135 &466358076
 SphereCollider:
   m_ObjectHideFlags: 0
