@@ -10,7 +10,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: e60770383cb54c44a814a153049b4904, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.548
+      value: -0.29
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e60770383cb54c44a814a153049b4904, type: 3}
       propertyPath: m_LocalPosition.y
@@ -18,7 +18,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e60770383cb54c44a814a153049b4904, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -5.104
+      value: -4.41
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e60770383cb54c44a814a153049b4904, type: 3}
       propertyPath: m_LocalRotation.w
@@ -68,6 +68,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: e60770383cb54c44a814a153049b4904, type: 3}
       insertIndex: -1
       addedObject: {fileID: 875399622847184854}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: e60770383cb54c44a814a153049b4904, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8449848361354735380}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: e60770383cb54c44a814a153049b4904, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5603595751435504256}
   m_SourcePrefab: {fileID: 100100000, guid: e60770383cb54c44a814a153049b4904, type: 3}
 --- !u!1 &2133313276102609405 stripped
 GameObject:
@@ -83,14 +89,14 @@ Animator:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2133313276102609405}
   m_Enabled: 1
-  m_Avatar: {fileID: 0}
+  m_Avatar: {fileID: 9000000, guid: e60770383cb54c44a814a153049b4904, type: 3}
   m_Controller: {fileID: 9100000, guid: 58337f54c8c2ab947904d1c7987f75d7, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
-  m_AnimatePhysics: 1
+  m_AnimatePhysics: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
@@ -123,7 +129,7 @@ MonoBehaviour:
   m_ActionEvents:
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 8449848361354735380}
         m_TargetAssemblyTypeName: Move, Assembly-CSharp
         m_MethodName: SetMovement
         m_Mode: 0
@@ -192,3 +198,28 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
+--- !u!114 &8449848361354735380
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2133313276102609405}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7fcaa69b367ccc54b82ff102a1c44dbf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _moveSpeed: 10
+--- !u!114 &5603595751435504256
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2133313276102609405}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9f4f91cdfd6f184596ef4fee767b2c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
