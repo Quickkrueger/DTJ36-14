@@ -16,12 +16,12 @@
                 },
                 {
                     "name": "Interact",
-                    "type": "Button",
+                    "type": "Value",
                     "id": "4e463f55-a713-48a6-b7e2-f0cb4401a8bb",
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": false
+                    "initialStateCheck": true
                 }
             ],
             "bindings": [

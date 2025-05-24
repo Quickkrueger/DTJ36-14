@@ -80,6 +80,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: e60770383cb54c44a814a153049b4904, type: 3}
       insertIndex: -1
       addedObject: {fileID: 5621175053594621310}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: e60770383cb54c44a814a153049b4904, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3159871221176288457}
   m_SourcePrefab: {fileID: 100100000, guid: e60770383cb54c44a814a153049b4904, type: 3}
 --- !u!1 &2133313276102609405 stripped
 GameObject:
@@ -232,7 +235,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fcaa69b367ccc54b82ff102a1c44dbf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _moveSpeed: 10
+  _moveSpeed: 5
 --- !u!114 &5603595751435504256
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -280,4 +283,30 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TriggerAction:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: DisplayUpgrade, Assembly-CSharp
+        m_MethodName: SetText
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &3159871221176288457
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2133313276102609405}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d0232329f7e1f149a5d5af82a5ae6d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentMoney: 69.69
+  displayMoney: {fileID: 0}

@@ -2,11 +2,10 @@ using UnityEngine;
 
 public interface IUpgradeable
 {
-    int BaseCost { get; set; }
+    float BaseCost { get; set; }
     int MaxUpgradeLevel {  get; set; }
     int CurrentUpgradeLevel {  get; set; }
 
-    int GetCost();
+    float GetCost();
     void Upgrade();
-    void SetActive();
 }

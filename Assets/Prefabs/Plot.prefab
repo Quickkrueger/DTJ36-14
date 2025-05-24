@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1494538507313373509}
   - component: {fileID: 2826650259966647912}
   - component: {fileID: 8111757875033486535}
+  - component: {fileID: 4482554207681785206}
   m_Layer: 0
   m_Name: Plot
   m_TagString: Untagged
@@ -99,5 +100,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 229af3044375ff841b874eab8f3e14f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hiveBasePrefab: {fileID: 0}
-  hiveTopPrefab: {fileID: 0}
+  hiveBasePrefab: {fileID: 692899222630585326, guid: 34cdfe59dc741c2408511fd018f55173, type: 3}
+  hiveTopPrefab: {fileID: 5920568337098517925, guid: 50dac44c699c55a4b8bc738b0f84e4cf, type: 3}
+  <BaseCost>k__BackingField: 20
+  <MaxUpgradeLevel>k__BackingField: 3
+--- !u!65 &4482554207681785206
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6094068922568911337}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2, y: 2.0000005, z: 0.20000033}
+  m_Center: {x: 0.000000008429372, y: -0.000000003491561, z: 0.100000046}

@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 public class Money : MonoBehaviour
 {
@@ -10,13 +9,13 @@ public class Money : MonoBehaviour
         UpdateDisplayMoney();   
     }
 
-    public void AddMoney(int amount)
+    public void AddMoney(float amount)
     {
         currentMoney += amount;
         UpdateDisplayMoney();
     }
 
-    public bool RemoveMoney(int amount)
+    public bool RemoveMoney(float amount)
     {
         if (!CanAfford(amount)) return false;
         currentMoney = Mathf.Max(0, currentMoney - amount);
@@ -24,7 +23,7 @@ public class Money : MonoBehaviour
         return true;
     }
 
-    private bool CanAfford(int amount)
+    private bool CanAfford(float amount)
     {
         return currentMoney >= amount;
     }
