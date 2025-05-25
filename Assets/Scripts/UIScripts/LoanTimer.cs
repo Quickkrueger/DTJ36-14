@@ -9,9 +9,12 @@ public class LoanTimer : MonoBehaviour
     private float loanStartTime;
     private float remainingTime;
     private bool isTimerRunning = true;
+    private LoadScene loadScene;
 
     private void Start()
     {
+        loadScene = gameObject.GetComponent<LoadScene>();
+
         loanTimerText = gameObject.GetComponent<Text>();
         remainingTime = loanTimeSeconds;
         loanStartTime = Time.time;
@@ -42,12 +45,13 @@ public class LoanTimer : MonoBehaviour
         int minutes = Mathf.FloorToInt(time / 60);
         int seconds = Mathf.FloorToInt(time % 60);
 
-        return string.Format("Loan Due in: {0:00}:{1:00}", minutes, seconds);
+        return string.Format("{0:00}:{1:00}", minutes, seconds);
     }
 
     private void finishTimer()
     {
         isTimerRunning = false;
+        loadScene.LoadGivenScene("GameOverLoan");
     }
 
     private void paidInFull()
