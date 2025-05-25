@@ -11,6 +11,8 @@ public class FarmUpgrade : MonoBehaviour, IUpgradeable
 
     void Start()
     {
+        CurrentUpgradeLevel = 0;
+
         foreach (var plot in plots)
         {
             plot.SetActive(false);

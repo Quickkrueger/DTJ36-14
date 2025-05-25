@@ -378,12 +378,12 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 2893f1be6fc836c4888e561e2ce9e574, type: 3}
+  m_Resource: {fileID: 8300000, guid: 2893f1be6fc836c4888e561e2ce9e574, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -817,7 +817,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: f38c8bafc2c2da248893cdc68fb484dd, type: 2}
+  - {fileID: 2100000, guid: 2fd519eb9d44ebc4984eabd38c6c3780, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1238,23 +1238,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5982513206811937454, guid: 6e559f035932c2040b36999f3836247d, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.6532815
+      value: 0.92387956
       objectReference: {fileID: 0}
     - target: {fileID: 5982513206811937454, guid: 6e559f035932c2040b36999f3836247d, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.6532815
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5982513206811937454, guid: 6e559f035932c2040b36999f3836247d, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.27059805
+      value: -0.38268343
       objectReference: {fileID: 0}
     - target: {fileID: 5982513206811937454, guid: 6e559f035932c2040b36999f3836247d, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.27059805
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5982513206811937454, guid: 6e559f035932c2040b36999f3836247d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: -90
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5982513206811937454, guid: 6e559f035932c2040b36999f3836247d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y

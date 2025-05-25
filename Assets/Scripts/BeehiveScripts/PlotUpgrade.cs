@@ -19,6 +19,7 @@ public class PlotUpgrade : MonoBehaviour, IUpgradeable
     void Awake()
     {
         objects = new List<GameObject>();
+        CurrentUpgradeLevel = 0;
     }
 
     public void Upgrade()

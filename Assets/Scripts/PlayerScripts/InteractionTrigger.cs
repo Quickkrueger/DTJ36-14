@@ -4,17 +4,20 @@ using static UnityEngine.InputSystem.InputAction;
 
 [RequireComponent(typeof(Money))]
 [RequireComponent (typeof(BeeSuit))]
+[RequireComponent(typeof(AllergyBehaviour))]
 public class InteractionTrigger : MonoBehaviour
 {
     IUpgradeable _upgrade;
     Money _money;
     BeeSuit _beeSuit;
+    AllergyBehaviour _allergyBehaviour;
     public UnityEvent<string> TriggerAction;
 
     private void Start()
     {
         _money = GetComponent<Money>();
         _beeSuit = GetComponent<BeeSuit>();
+        _allergyBehaviour = GetComponent<AllergyBehaviour>();
     }
     private void OnTriggerEnter(Collider other)
     {
@@ -37,7 +40,7 @@ public class InteractionTrigger : MonoBehaviour
     private bool CheckForUpgradable(Collider other)
     {
         IUpgradeable upgradeable = _upgrade;
-        if (other.gameObject.TryGetComponent<IUpgradeable>(out _upgrade))
+        if (other.gameObject.TryGetComponent<IUpgradeable>(out _upgrade) && _upgrade.MaxUpgradeLevel > _upgrade.CurrentUpgradeLevel)
         {
             System.Type type = _upgrade.GetType();
 
@@ -52,6 +55,10 @@ public class InteractionTrigger : MonoBehaviour
             else if (type == typeof(FarmUpgrade))
             {
                 TriggerAction.Invoke($"'E' to buy more plots\n(${_upgrade.GetCost()})");
+            }
+            else if (type == typeof(Medipack))
+            {
+                TriggerAction.Invoke($"'E' to use Epipen\n(${_upgrade.GetCost()})");
             }
 
             return true;
@@ -94,6 +101,10 @@ public class InteractionTrigger : MonoBehaviour
             {
                 _beeSuit.Upgrade();
             }
+            else if (type == typeof(Medipack))
+            {
+                _allergyBehaviour.Epipen();
+            }
 
             if (_upgrade.MaxUpgradeLevel > _upgrade.CurrentUpgradeLevel)
             {
@@ -110,6 +121,10 @@ public class InteractionTrigger : MonoBehaviour
                 else if (type == typeof(FarmUpgrade))
                 {
                     TriggerAction.Invoke($"'E' to buy more plots\n(${_upgrade.GetCost()})");
+                }
+                else if (type == typeof(Medipack))
+                {
+                    TriggerAction.Invoke($"'E' to use Epipen\n(${_upgrade.GetCost()})");
                 }
             }
             else

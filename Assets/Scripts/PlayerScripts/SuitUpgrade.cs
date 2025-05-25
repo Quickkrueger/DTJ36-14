@@ -21,7 +21,7 @@ public class SuitUpgrade : MonoBehaviour, IUpgradeable
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        CurrentUpgradeLevel = 0;
     }
 
     // Update is called once per frame

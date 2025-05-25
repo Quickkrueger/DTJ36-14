@@ -3,6 +3,7 @@ using UnityEngine;
 [RequireComponent(typeof(BeeSuit))]
 public class AllergyBehaviour : MonoBehaviour
 {
+    public float epipenEffect = 5;
     private float allergyLevel = 0;
     private float maxAllergyLevel = 100;
     private BeeSuit beeSuit;
@@ -26,7 +27,7 @@ public class AllergyBehaviour : MonoBehaviour
     {
         // Implement the logic for what happens when the target uses an epipen
         Debug.Log($"{gameObject.name} has used an epipen!");
-        allergyLevel = Mathf.Max(0, allergyLevel - 5); // Reduce allergy level by 5, but not below 0
+        allergyLevel = Mathf.Max(0, allergyLevel - epipenEffect); // Reduce allergy level by 5, but not below 0
         UpdateShader();
     }
 
