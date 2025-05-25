@@ -55,5 +55,58 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 46fc76457b0d36d4dbe11ef3373f1b61, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1733348800880185026}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 46fc76457b0d36d4dbe11ef3373f1b61, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8717175686768282889}
   m_SourcePrefab: {fileID: 100100000, guid: 46fc76457b0d36d4dbe11ef3373f1b61, type: 3}
+--- !u!1 &6363015334993825812 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 46fc76457b0d36d4dbe11ef3373f1b61, type: 3}
+  m_PrefabInstance: {fileID: 6092404297065475397}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &1733348800880185026
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6363015334993825812}
+  m_Material: {fileID: 13400000, guid: a5a1c822186069c4e9856b4e110b7f8b, type: 2}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 4.729574, y: 8.043849, z: 5.1122885}
+  m_Center: {x: 1.6398863, y: -0.04332285, z: 2.4717426}
+--- !u!65 &8717175686768282889
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6363015334993825812}
+  m_Material: {fileID: 13400000, guid: a5a1c822186069c4e9856b4e110b7f8b, type: 2}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 8.357529, y: 4.1321044, z: 5.1122885}
+  m_Center: {x: 0.06670079, y: -1.9838597, z: 2.4717567}
