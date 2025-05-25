@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3506313190995742109}
   - component: {fileID: 5622738328464696571}
   - component: {fileID: 1729933507052106738}
+  - component: {fileID: -3548297830181782201}
   m_Layer: 0
   m_Name: Box-Lidless
   m_TagString: Untagged
@@ -101,8 +102,30 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   honeyLevel: 0
+  honeyValue: 0.1
   chancePerTick: 0.9
   TickPerSecond: 4
+--- !u!65 &-3548297830181782201
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 692899222630585326}
+  m_Material: {fileID: 13400000, guid: a5a1c822186069c4e9856b4e110b7f8b, type: 2}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.6543844, y: 1.6543845, z: 1.6543849}
+  m_Center: {x: 0.00000003486354, y: -0.000000014440954, z: 0.82719225}
 --- !u!1001 &6824594428412772002
 PrefabInstance:
   m_ObjectHideFlags: 0

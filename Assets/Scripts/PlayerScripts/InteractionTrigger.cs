@@ -18,30 +18,56 @@ public class InteractionTrigger : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.TryGetComponent<IUpgradeable>(out _upgrade))
+        if (!CheckForUpgradable(other))
+        {
+            CheckForHoney(other);
+        }
+
+    }
+
+    private void CheckForHoney(Collider other)
+    {
+        if(other.gameObject.TryGetComponent<HoneyBuildup>(out HoneyBuildup honey))
+        {
+            _money.AddMoney(honey.honeyValue * (float)honey.honeyLevel);
+            honey.honeyLevel = 0;
+        }
+    }
+
+    private bool CheckForUpgradable(Collider other)
+    {
+        IUpgradeable upgradeable = _upgrade;
+        if (other.gameObject.TryGetComponent<IUpgradeable>(out _upgrade))
         {
             System.Type type = _upgrade.GetType();
 
             if (type == typeof(PlotUpgrade))
             {
-                TriggerAction.Invoke($"'E' to upgrade plot\n${_upgrade.GetCost()}");
+                TriggerAction.Invoke($"'E' to upgrade plot\n(${_upgrade.GetCost()})");
             }
             else if (type == typeof(SuitUpgrade))
             {
-                TriggerAction.Invoke($"'E' to upgrade suit\n${_upgrade.GetCost()}");
+                TriggerAction.Invoke($"'E' to upgrade suit\n(${_upgrade.GetCost()})");
             }
-            else if (type == typeof(SuitUpgrade))
+            else if (type == typeof(FarmUpgrade))
             {
-                TriggerAction.Invoke($"'E' to upgrade farm\n${_upgrade.GetCost()}");
+                TriggerAction.Invoke($"'E' to buy more plots\n(${_upgrade.GetCost()})");
             }
 
+            return true;
+
         }
+
+        _upgrade = upgradeable;
+        return false;
     }
+
+
 
     private void OnTriggerExit(Collider other)
     {
         IUpgradeable upgrade;
-        if (other.TryGetComponent<IUpgradeable>(out upgrade) && upgrade == _upgrade)
+        if ((other.TryGetComponent<IUpgradeable>(out upgrade) && upgrade == _upgrade) || _upgrade == null)
         {
             TriggerAction.Invoke("");
             upgrade = null;
@@ -81,9 +107,9 @@ public class InteractionTrigger : MonoBehaviour
                 {
                     TriggerAction.Invoke($"'E' to upgrade suit\n(${_upgrade.GetCost()})");
                 }
-                else if (type == typeof(SuitUpgrade))
+                else if (type == typeof(FarmUpgrade))
                 {
-                    TriggerAction.Invoke($"'E' to upgrade farm\n(${_upgrade.GetCost()})");
+                    TriggerAction.Invoke($"'E' to buy more plots\n(${_upgrade.GetCost()})");
                 }
             }
             else

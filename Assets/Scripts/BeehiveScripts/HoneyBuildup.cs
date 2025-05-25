@@ -3,6 +3,7 @@ using UnityEngine;
 public class HoneyBuildup : MonoBehaviour
 {
     public int honeyLevel = 0;
+    public float honeyValue = 0.1f;
     private int maxHoneyLevel = 100;
 
     public float chancePerTick = 0.9f;

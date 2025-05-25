@@ -16,7 +16,7 @@ public class PlotUpgrade : MonoBehaviour, IUpgradeable
     [HideInInspector]
     public int CurrentUpgradeLevel { get; set; }
 
-    void Start()
+    void Awake()
     {
         objects = new List<GameObject>();
     }
