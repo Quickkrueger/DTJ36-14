@@ -48,6 +48,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -150009337949190703, guid: e60770383cb54c44a814a153049b4904, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: edde8456e5e9d5a429838cd1eb133ac5, type: 2}
     - target: {fileID: 919132149155446097, guid: e60770383cb54c44a814a153049b4904, type: 3}
       propertyPath: m_Name
       value: Character
@@ -56,6 +60,10 @@ PrefabInstance:
       propertyPath: m_RootBone
       value: 
       objectReference: {fileID: 7847187139995080862}
+    - target: {fileID: 8417361359673230750, guid: e60770383cb54c44a814a153049b4904, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: c75866af2001bc84997eb6b4eaaae338, type: 2}
     - target: {fileID: 8699652204047898494, guid: e60770383cb54c44a814a153049b4904, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -334,6 +342,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31c399bfb8996f64e95f85d51687f8c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  renderer: {fileID: 7316692713550229810}
+  shirtMaterial: {fileID: 2100000, guid: 6574e23ccdd57b648becee7810206b03, type: 2}
+  pantsMaterial: {fileID: 2100000, guid: 24173907ff140db47bbccc1c931d934f, type: 2}
+  hat: {fileID: 7629444496896140242}
+--- !u!137 &7316692713550229810 stripped
+SkinnedMeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 8417361359673230750, guid: e60770383cb54c44a814a153049b4904, type: 3}
+  m_PrefabInstance: {fileID: 1250422686043452588}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &7629444496896140242 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8699652204047898494, guid: e60770383cb54c44a814a153049b4904, type: 3}
+  m_PrefabInstance: {fileID: 1250422686043452588}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &7847187139995080862 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -163066445757010894, guid: e60770383cb54c44a814a153049b4904, type: 3}
