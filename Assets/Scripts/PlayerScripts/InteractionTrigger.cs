@@ -3,21 +3,38 @@ using UnityEngine.Events;
 using static UnityEngine.InputSystem.InputAction;
 
 [RequireComponent(typeof(Money))]
+[RequireComponent (typeof(BeeSuit))]
 public class InteractionTrigger : MonoBehaviour
 {
     IUpgradeable _upgrade;
     Money _money;
+    BeeSuit _beeSuit;
     public UnityEvent<string> TriggerAction;
 
     private void Start()
     {
         _money = GetComponent<Money>();
+        _beeSuit = GetComponent<BeeSuit>();
     }
     private void OnTriggerEnter(Collider other)
     {
         if(other.gameObject.TryGetComponent<IUpgradeable>(out _upgrade))
         {
-            TriggerAction.Invoke($"'E' to upgrade plot\n${_upgrade.GetCost()}");
+            System.Type type = _upgrade.GetType();
+
+            if (type == typeof(PlotUpgrade))
+            {
+                TriggerAction.Invoke($"'E' to upgrade plot\n${_upgrade.GetCost()}");
+            }
+            else if (type == typeof(SuitUpgrade))
+            {
+                TriggerAction.Invoke($"'E' to upgrade suit\n${_upgrade.GetCost()}");
+            }
+            else if (type == typeof(SuitUpgrade))
+            {
+                TriggerAction.Invoke($"'E' to upgrade farm\n${_upgrade.GetCost()}");
+            }
+
         }
     }
 
@@ -33,16 +50,41 @@ public class InteractionTrigger : MonoBehaviour
 
     public void StartInteraction(CallbackContext callbackContext)
     {
+        if (_upgrade == null)
+        {
+            return;
+        }
+
+            System.Type type = _upgrade.GetType();
+
         if (!callbackContext.performed)
         {
             return;
         }
-        if (_upgrade != null && _upgrade.MaxUpgradeLevel > _upgrade.CurrentUpgradeLevel && _money.RemoveMoney(_upgrade.GetCost()))
+        if (_upgrade.MaxUpgradeLevel > _upgrade.CurrentUpgradeLevel && _money.RemoveMoney(_upgrade.GetCost()))
         {
             _upgrade.Upgrade();
+            if (type == typeof(SuitUpgrade))
+            {
+                _beeSuit.Upgrade();
+            }
+
             if (_upgrade.MaxUpgradeLevel > _upgrade.CurrentUpgradeLevel)
             {
-                TriggerAction.Invoke($"'E' to upgrade plot\n${_upgrade.GetCost()}");
+
+
+                if (type == typeof(PlotUpgrade))
+                {
+                    TriggerAction.Invoke($"'E' to upgrade plot\n(${_upgrade.GetCost()})");
+                }
+                else if (type == typeof(SuitUpgrade))
+                {
+                    TriggerAction.Invoke($"'E' to upgrade suit\n(${_upgrade.GetCost()})");
+                }
+                else if (type == typeof(SuitUpgrade))
+                {
+                    TriggerAction.Invoke($"'E' to upgrade farm\n(${_upgrade.GetCost()})");
+                }
             }
             else
             {

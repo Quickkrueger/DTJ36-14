@@ -35,10 +35,8 @@ public class BeehiveDamage : MonoBehaviour
     {
         if (currentTarget != null && Time.time - lastDamageAttempt >= (1f/TickPerSecond))
         {
-            if (Random.value < chancePerTick)
-            {
                 currentTarget.Sting();
-            }
+
             lastDamageAttempt = Time.time;
         }
     }

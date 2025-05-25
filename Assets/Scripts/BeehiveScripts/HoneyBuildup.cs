@@ -16,6 +16,7 @@ public class HoneyBuildup : MonoBehaviour
             {
                 honeyLevel = Mathf.Min(maxHoneyLevel, honeyLevel + 1);
             }
+
             lastHoneyAttempt = Time.time;
         }
     }
